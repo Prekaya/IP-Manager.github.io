@@ -1,0 +1,314 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #E9ECEF;
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+header {
+	text-align: center;
+	color: #535659;
+	margin-bottom: 30px;
+}
+
+
+/*Navigation Bar Style*/
+
+nav {
+	background-color: #535659;
+	border-bottom: 3px solid #888F95;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+nav li {
+	list-style-type: none;
+	width: 50%;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #535659;
+}
+
+nav li:nth-of-type(1),
+nav li:nth-of-type(2) {
+	border-top: none;
+}
+
+nav li:last-of-type {
+	border-bottom: none;
+}
+
+nav li.selected {
+	color: #54A5C4;
+}
+
+nav a:link,
+nav a:visited {
+	color: #888F95;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:visited:hover,
+nav a:active,
+nav a:visited:active {
+	color: #54A5C4;
+}
+
+
+/*Table Style*/
+
+table,
+th,
+td {
+	border-collapse: collapse;
+	border: 0.02px solid #888F95;
+}
+
+table {
+	margin-top: 10px;
+	width: 100%;
+}
+
+th {
+	background-color: #535659;
+	text-align: center;
+	color: #FFFFFF;
+	height: 30px;
+}
+
+td {
+	text-align: center;
+}
+
+th:first-child:nth-last-child(3),
+th:first-child:nth-last-child(3)~th {
+	width: 33.33333%;
+}
+
+th:first-child:nth-last-child(4),
+th:first-child:nth-last-child(4)~th {
+	width: 25%;
+}
+
+th:first-child:nth-last-child(5),
+th:first-child:nth-last-child(5)~th {
+	width: 20%;
+}
+
+th:first-child:nth-last-child(8),
+th:first-child:nth-last-child(8)~th {
+	width: 12.5%;
+}
+
+
+/*Button Style*/
+
+button {
+	font-size: 16px;
+	font-weight: bold;
+	float: right;
+	color: #FFFFFF;
+	background-color: #5995DA;
+	display: flex;
+	border: none;
+	border-radius: 3px;
+	margin: 20px 20px;
+	padding: 10px 40px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #76AEED;
+}
+
+button:active {
+	background-color: #407FC7;
+}
+
+.buttoncont button {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #5995DA;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 40px;
+	cursor: pointer;
+}
+
+.buttoncont button:hover {
+	background-color: #76AEED;
+}
+
+.buttoncont button:active {
+	background-color: #407FC7;
+}
+
+
+/*Dropdown menu styles*/
+
+.menu>li {
+	display: inline;
+	margin-right: 50px;
+}
+
+.menu>li:last-of-type {
+	margin-right: 0;
+}
+
+.dropdown:hover .features-menu {
+	display: flex;
+	flex-direction: column;
+	background: #535659;
+	border-radius: 5px;
+	padding-top: 0px;
+	position: absolute;
+	top: 0px;
+	right: -85px;
+}
+
+.features-menu li {
+	list-style: none;
+	padding: 10px 20px 10px 20px;
+	margin: 0px;
+	z-index: 1;
+}
+
+.features-menu li:last-of-type {
+	border-bottom: none;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown>span {
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+}
+
+.features-menu {
+	display: none;
+}
+
+a:link,
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+.form {
+	width: 50%;
+}
+.form-row {
+	display: flex;
+	align-items: right;
+	margin: 10px 20px;
+}
+
+.form-row select {
+	width: 80%;
+	height: initial;
+	padding: 5px;
+	font-size: 14px;
+	border: 1px solid #D6D9DC;
+	-webkit-appearance: none;
+	padding: 7px;
+}
+
+.form-row label {
+	text-align: right;
+	width: 120px;
+	margin-top: 7px;
+	padding-right: 20px;
+}
+
+/*Laptop Screen Modifications*/
+
+@media only screen and (min-width: 750px) {
+	nav {
+		display: flex;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	nav li {
+		display: flex;
+		justify-content: center;
+		width: auto;
+		border-top: none;
+
+	}
+	nav li:nth-of-type(2n) {
+		border-left: none;
+	}
+	.form-row select {
+		width: 200px;
+	}
+	
+}
+
+
+/*Phone Screen Modifications*/
+
+@media only screen and (max-width: 400px) {
+	nav ul {
+		display: flex;
+		justify-content: center;
+	}
+	nav li {
+		list-style-type: none;
+		width: 50%;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		color: #535659;
+		border-bottom: 1px solid #888F95;
+	}
+	nav li:nth-of-type(2n) {
+		border-left: 1px solid #888F95;
+	}
+
+	
+
+}
+
+
+/*Tablet Screen Modifications*/
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	nav ul {
+		display: flex;
+		justify-content: center;
+	}
+	nav li {
+		list-style-type: none;
+		width: 50%;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		color: #535659;
+		border-bottom: 1px solid #888F95;
+	}
+	nav li:nth-of-type(2n) {
+		border-left: 1px solid #888F95;
+	}
+
+
+
+}
